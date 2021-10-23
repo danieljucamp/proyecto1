@@ -89,9 +89,7 @@ nav li {
     height: 15%;
     width: 40%;
     margin: 0 auto;
-    display: flex;
     justify-content: center;
-    align-items: center;
     background: radial-gradient(circle, rgba(101,168,231,1) 0%, rgba(131,195,255,1) 0%, rgba(0,132,255,1) 100%);;
     border: solid darkblue 2px ;
     border-radius: 10px;
@@ -101,10 +99,12 @@ nav li {
     font-size: 1.7rem;
     font-family: 'Sintony';
     text-align: center;
+    position: relative;
+    left: 17%;
 }
 
 .suscribe input[type="text"] {
-    min-width: 500px;
+    width: 500px;
 }
 
 .suscribe input[type="submit"] {
@@ -229,7 +229,7 @@ nav li {
     border-top: solid black 2px;
 }
 
-.unete {;
+.unete {
     height: 15%;
     background-color: rgb(0, 132, 255);
     background: radial-gradient(circle, rgba(101,168,231,1) 0%, rgba(131,195,255,1) 0%, rgba(0,132,255,1) 100%);
@@ -249,6 +249,7 @@ nav li {
     justify-content: center;
     justify-items: center;
     flex-direction: column;
+    min-width: 400px;
 }
 
 .job-info h3 {
@@ -353,34 +354,113 @@ footer {
         font-size: 3.5rem;
     }
 
+    .suscribe {
+        height: 15%;
+        width: 50%;
+    }
+
+    .suscribe label {
+        font-size: 1.2rem;
+        font-family: 'Sintony';
+        margin-left: 90px;
+    }
+    
+    .suscribe input[type="text"] {
+        width: 400px;
+        position: relative;
+        display: block;
+        left: 170px;
+    
+    }
+    
+    .suscribe input[type="submit"] {
+        color: black;
+        font-weight: bold;
+        border: solid black 1px;
+        display: block;
+        position: relative;
+        left: 327px;
+        top: 8px;
+    }
+
     .descarga-app {
         height: 650px;
         background-image: url(./images/APP\ 1400.png);
     }
-
+    
     .bolsa-trabajo {
-        height: 900px;
         display: flex;
         flex-flow: row wrap;
     }
 
     .job-img-cont {
-        width: 50%;
-        flex-grow: 0;
+        flex-grow: 2;
         flex-shrink: 1;
-        flex-basis: 100px;
+        flex-basis: 500px;
     }
 
     .job-info {
-        width: 50%;
         flex-shrink: 1;
+        flex-grow: 1;
+        flex-basis: 300px;
     }
+    
 }
 
 @media screen and (max-width: 1080px) {
     
+     .jumbotron {
+        background-image: url(./images/jumbotron.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 65vh;
+        opacity: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .jumbotron-content {
+        height: 62%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 1;
+    }
+    /*
+    .jumbotron-content h1 {
+        font-family: 'Bungee Shade', sans-serif;
+        font-size: 5rem;
+        color: rgb(255, 255, 255);
+        width: 100%;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.281);
+        flex-shrink: 1;
+    }
+    
+
+    .suscribe label {
+        font-size: 1.3rem;
+        font-family: 'Sintony';
+        text-align: center;
+    }
+        
+
+    .suscribe input[type="text"] {
+        max-width: 300px;
+    }
+    
+    .suscribe input[type="submit"] {
+        color: black;
+        font-weight: bold;
+        border: solid black 1px;
+    }
+    */
+
     .jumbotron-content h1 {
         font-size: 3rem;
+        margin-top: 120px;
     }
  
     .descarga-app {
@@ -401,11 +481,21 @@ footer {
 
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 720px) {
 
     .jumbotron-content h1 {
         font-size: 2.5rem;
+        position: relative;
+        bottom: 300px;
     }
+
+    .jumbotron-content {
+
+    }
+
+.suscribe {
+
+}
 
     .cardholder {
         height: 1700px;
