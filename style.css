@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sintony&display=swap');
 
 * {
     margin: 0;
@@ -9,11 +11,17 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: solid black 2px;
+}
+
+.logo-cont {
+    flex: 1 1 100px;
+    margin-left: 25px;
 }
 
 .logo {
-     width: 5%; /*buscar manera responsiva de reducir el tamano */
-     margin-left: 25px;
+    width: 80px;
+    height: 80px;
 }
 
 nav {
@@ -29,17 +37,23 @@ a:link, a:visited {
     text-decoration: none;
 }
 
-li {
+a:hover {
+    text-decoration: underline;
+}
+
+nav li {
     display: inline;
     font-size: 2rem;
     margin-right: 20px;
     /* background-color: rgb(44, 168, 252); */
     padding: 5px 5px;
     border-radius: 5px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Source Sans Pro', Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     color: black;
 }
+
+/* JUMBOTRON */
 
 .jumbotron {
     background-image: url(./images/jumbotron.jpg);
@@ -47,39 +61,65 @@ li {
     background-size: cover;
     height: 65vh;
     opacity: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .jumbotron-content {
-    height: 60%;
+    height: 62%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    flex-shrink: 1;
 }
 
 .jumbotron-content h1 {
     font-family: 'Bungee Shade', sans-serif;
-    font-size: 4rem;
+    font-size: 5rem;
     color: rgb(255, 255, 255);
     width: 100%;
     text-align: center;
-}
-
-.jumbotron-content p {
-
+    background-color: rgba(0, 0, 0, 0.281);
+    flex-shrink: 1;
 }
 
 .suscribe {
-    height: 39%;
-    width: 100%;
+    height: 15%;
+    width: 40%;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    background: radial-gradient(circle, rgba(101,168,231,1) 0%, rgba(131,195,255,1) 0%, rgba(0,132,255,1) 100%);;
+    border: solid darkblue 2px ;
+    border-radius: 10px;
 }
+
+.suscribe label {
+    font-size: 1.7rem;
+    font-family: 'Sintony';
+    text-align: center;
+}
+
+.suscribe input[type="text"] {
+    min-width: 500px;
+}
+
+.suscribe input[type="submit"] {
+    color: black;
+    font-weight: bold;
+    border: solid black 1px;
+}
+
+/* CARDHOLDER */
 
 .cardholder {
     height: 800px;
     background-color: rgb(255, 31, 31);
+    border-top: solid black 2px;
+    border-bottom: solid black 2px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -91,8 +131,15 @@ li {
 .cardholder h1 {
     width: 100%;
     text-align: center;
-    background-color: blanchedalmond;
+    background-color: whitesmoke;
+    border-top: solid rgb(255, 31, 31) 8px;
+    border-bottom: solid rgb(255, 31, 31) 2px;
+    color: black;
+    text-transform: uppercase;
     margin: 0 auto;
+    margin-top: 16px;
+    font-family: 'Source Sans Pro';
+    font-size: 3rem;
 }
 
 .card {
@@ -105,6 +152,7 @@ li {
     -webkit-box-shadow: 8px 10px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 8px 10px 5px 0px rgba(0,0,0,0.75);
     border-radius: .8rem;
+    flex-shrink: 1;
 }
 
 .card-image {
@@ -115,42 +163,262 @@ li {
     border-top-right-radius: .8rem;
 }
 
+.card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-info h3{
+    text-align: center;
+    font-family: 'Source Sans Pro';
+    font-size: 2.4rem;
+    background-color: rgb(224, 208, 63);
+    color: red;
+    padding-top: 5px;
+    margin-top: -4px;
+}
+
+.card-info p{
+    font-family: 'Sintony';
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.card-info button {
+    width: 35%;
+    height: 3rem;
+    margin: 15px auto;
+    background-color: rgb(0, 132, 255);
+    background: radial-gradient(circle, rgba(101,168,231,1) 0%, rgba(131,195,255,1) 0%, rgba(0,132,255,1) 100%);
+    border: solid rgb(0, 0, 0) 2px;
+    font-family: 'Sintony';
+    font-size: 1.3rem;
+    border-radius: 5px;
+}
+
+/* DESCARGA APP */
+
 .descarga-app {
     height: 650px;
     background-image: url(./images/DESCARGA\ NUESTRA\ APP.png);
-    display: flex;
 }
 
+.descarga-app button {
+    background-color: rgb(0, 132, 255);
+    background: radial-gradient(circle, rgba(101,168,231,1) 0%, rgba(131,195,255,1) 0%, rgba(0,132,255,1) 100%);
+    border: solid rgb(0, 0, 0) 2px;
+    border-radius: 10px;
+    width: 200px;
+    height: 100px;
+    position: relative;
+    top: 465px;
+    left: 570px;
+    font-size: 1.8rem;
+    font-family: 'Source Sans Pro';
+}
+
+/* BOLSA DE TRABAJO */
+
 .bolsa-trabajo {
-    height: 500px;
+    height: 600px;
     background-color: rgb(224, 208, 63);
     display: flex;
     flex-flow: row-reverse wrap;
-
+    border-top: solid black 2px;
 }
 
-.unete {
-    width: 100%;
+.unete {;
     height: 15%;
-    background-color: blanchedalmond;
+    background-color: rgb(0, 132, 255);
+    background: radial-gradient(circle, rgba(101,168,231,1) 0%, rgba(131,195,255,1) 0%, rgba(0,132,255,1) 100%);
     text-align: center;
-}
-
-.info {
     width: 100%;
-    height: 85%;
+    font-family: 'Source Sans Pro';
+    font-size: 3rem;
+    flex: 1 1 100%;
 }
 
-.info .job-image {
-    height: 85%;
-    width: 60%;
-    justify-self: right;
+.job-info {
+    flex: 1 1 600px;
+    text-align: center;
+    border: solid black 3px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
 }
+
+.job-info h3 {
+    font-size: 2rem;
+    font-family: 'Source Sans Pro';
+}
+
+.job-info p {
+    text-align: justify;
+    width: 70%;
+    margin: 25px auto;
+    line-height: 1.5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.job-info button {
+    background-color: rgb(0, 132, 255);
+    background: radial-gradient(circle, rgba(101,168,231,1) 0%, rgba(131,195,255,1) 0%, rgba(0,132,255,1) 100%);
+    border: solid rgb(0, 0, 0) 2px;
+    border-radius: 10px;
+    width: 200px;
+    height: 100px;
+    font-size: 1.8rem;
+    font-family: 'Source Sans Pro';
+    justify-self: center;
+    margin: 0 auto;
+}
+
+.job-img-cont {
+    height: 85%;
+    flex: 1 1 1000px;
+    background-color: violet;
+    background-image: url(./images/Los-Pollos-Hermanos-10.jpg);
+    background-position: center;
+    border-bottom: solid black 3px;
+}
+
+/* FOOTER */
 
 footer {
     height: 200px;
     background-color: rgb(99, 99, 99);;
     display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.footer
+.footer-social {
+    width: 33.3%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    height: 50px;
+    width: 50px;
+    margin-right: 20px;
+}
+
+.footer-cont {
+    width: 100%;
+    display: flex;
+    justify-content:space-evenly;
+    flex-direction: row;
+    align-items: baseline;
+    margin-top: 3rem;
+}
+
+.footer-nosotros {
+    /* background-color: blue; */
+    flex-basis: 200px;
+    /* flex-grow: 1; */
+}
+
+.footer-legal {
+    /* background-color: red; */
+    /* flex-grow: 1; */
+    flex-basis: 200px;
+}
+
+.footer-cont li {
+    list-style-type: none;
+}
+
+.footer-cont ul {
+    padding-left: 0px;
+}
+
+/* MEDIA QUERIES */
+
+
+@media screen and (max-width: 1499px) {
+   
+    .jumbotron-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .descarga-app {
+        height: 650px;
+        background-image: url(./images/APP\ 1400.png);
+    }
+
+    .bolsa-trabajo {
+        height: 900px;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .job-img-cont {
+        width: 50%;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 100px;
+    }
+
+    .job-info {
+        width: 50%;
+        flex-shrink: 1;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    
+    .jumbotron-content h1 {
+        font-size: 3rem;
+    }
+ 
+    .descarga-app {
+        height: 650px;
+        background: url('images\APP 1400.png');
+    }
+
+    .cardholder {
+        height: 1700px;
+    }
+
+    .card {
+        height: 500px;
+        width: 60%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+    .jumbotron-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .cardholder {
+        height: 1700px;
+    }
+    
+    .card {
+        height: 500px;
+        width: 60%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    
+}

@@ -10,7 +10,9 @@
 </head>
 <body>
     <header>
+        <div class="logo-cont">
         <img src="\images\fa76bad19f70119ca8fe070e23698071.png" alt="" class="logo">
+        </div>
         <nav>
             <ul>
                 <li><a href="#">Menú</a></li>
@@ -29,9 +31,10 @@
             <div class="suscribe">
                 <!-- <p>Suscribete a nuestro newsletter</p> -->
                 <form>
-                    <label for="fname">Suscribete a nuestro newsletter</label>
-                    <input type="text" id="fname" name="fname">
-                    <input type="submit" value="Suscribirse">
+                    <label for="fname">Recibe nuestras ofertas por correo:</label>
+                    <br>
+                    <input type="text" id="email" name="email" placeholder="Ingresa tu correo">
+                    <input type="submit" value="Suscribirse" class="sus-btn">
                 </form>  
             </div>
     </section>
@@ -40,51 +43,79 @@
         <h1>Conoce nuestro menú </h1>
         <article class="card">
             <img src="images\016e3756571847.5a6f92e0ec92f.jpg" alt="" class="card-image card-1">
-            <div>
+            <div class="card-info">
                 <h3>Paquetes</h3>
-                <p></p>
-                <button></button>
+                <p>¡Para chuparse los dedos!</p>
+                <button>Comprar</button>
             </div>
         </article>
         <article class="card">
             <img src="images\los_pollos_hermanos.0.jpg" alt="" class="card-image">
+            <div class="card-info">
             <h3>Complementos</h3>
-            <p></p>
-            <button></button>
+            <p>Para ese toque extra</p>
+            <button>Comprar</button>
+            </div>
         </article>
         <article class="card">
             <img src="images\maxresdefault.jpg" alt="" class="card-image">
+            <div class="card-info">
             <h3>Hamburguesas</h3>
-            <p></p>
-            <button></button>
+            <p>Las mejores burguirs de pollo</p>
+            <button>Comprar</button>
+            </div>
         </article>
     </section>
 
     <section class="descarga-app">
         <img src="" alt="" class="app-image">
-        <article class="info">
-            
-        </article>
+        <button type="button">¡Descarga ya! </button>
     </section>
     
+    <!-- BOLSA DE TRABAJO -->
+
     <section class="bolsa-trabajo">
         <div class="unete">
             <h1>Únete a nuestro equipo</h1>
         </div>
-        <div class="info">
-            <img src="./images/Los-Pollos-Hermanos-10.jpg" alt="" class="job-image">
+        <div class="job-img-cont">
+        </div>
+        <div class="job-info">
+            <h3>El mejor lugar para trabajar</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque veritatis voluptatibus facilis at, beatae, commodi amet rerum saepe nesciunt, mollitia quasi architecto corrupti ipsam.</p>
+            <button>Ver vacantes</button>
         </div>
     </section>
 
+    <!-- FOOTER  -->
+
     <footer>
-        <div class="footer-cont">
-
+        <div class="footer-social">
+            <div class="social-media">
+                <a href="#"><img src="./images/5279111_network_fb_social media_facebook_facebook logo_icon.svg" alt="" class="icon"></a>
+                <a href="#"><img src="./images/5279112_camera_instagram_social media_instagram logo_icon.svg" alt="" class="icon"></a>
+                <a href="#"><img src="./images/5279123_tweet_twitter_twitter logo_icon.svg" alt="" class="icon"></a>
+                <a href="#"><img src="./images/5279120_play_video_youtube_youtuble logo_icon.svg" alt="" class="icon"></a>
+            </div>
         </div>
         <div class="footer-cont">
-
-        </div>
-        <div class="footer-cont">
-
+            <div class="footer-nosotros">
+                <h3>Nosotros</h3>
+                <ul>
+                    <li>Misión</li>
+                    <li>Visión</li>
+                    <li>Nuestra historia</li>
+                    <li>Bolsa de trabajo</li>
+                </ul>
+            </div>
+            <div class="footer-legal">
+                <h3>Legal</h3>
+                <ul>
+                    <li>Aviso legal</li>
+                    <li>Privacidad</li>
+                    <li>Tablas nutrimentales</li>
+                </ul>
+            </div>
         </div>
     </footer>
 </body>
