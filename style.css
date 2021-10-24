@@ -144,7 +144,8 @@ nav li {
 
 .card {
     width: 25%;
-    min-width: 300px;
+    min-width: 400px;
+    max-width: 470px;
     height: 65%;
     margin: 100px 50px;
     background-color: snow;
@@ -383,6 +384,15 @@ footer {
         top: 8px;
     }
 
+    .card {
+        min-width: 15%;
+        margin-left: 0px;
+        margin-right: 0px;
+        flex-shrink: 1;
+        flex-grow: 1;
+        flex-basis: 300px;
+    }
+
     .descarga-app {
         height: 650px;
         background-image: url(./images/APP\ 1400.png);
@@ -464,8 +474,14 @@ footer {
     }
  
     .descarga-app {
-        height: 650px;
-        background: url('images\APP 1400.png');
+        height: 450px;
+        background: url(./images/APP\ med.png);
+        background-position-y: center;
+    }
+
+    .descarga-app button {
+        position: relative;
+        bottom: 380px;
     }
 
     .cardholder {
@@ -486,16 +502,35 @@ footer {
     .jumbotron-content h1 {
         font-size: 2.5rem;
         position: relative;
-        bottom: 300px;
     }
 
     .jumbotron-content {
 
     }
 
-.suscribe {
-
-}
+    .suscribe label {
+        font-size: 1.2rem;
+        font-family: 'Sintony';
+        margin-left: 0px;
+    }
+    
+    .suscribe input[type="text"] {
+        width: 400px;
+        position: relative;
+        display: block;
+        left: 42px;
+    
+    }
+    
+    .suscribe input[type="submit"] {
+        color: black;
+        font-weight: bold;
+        border: solid black 1px;
+        display: block;
+        position: relative;
+        left: 210px;
+        top: 8px;
+    }
 
     .cardholder {
         height: 1700px;
@@ -507,8 +542,107 @@ footer {
         margin-top: 15px;
         margin-bottom: 15px;
     }
-}
 
-@media screen and (max-width: 480px){
+    .descarga-app button{
+        position: relative;
+        left: 300px;
+        top: 300px;
+    }
     
+
+}
+    /* MOVIL */
+@media screen and (max-width: 520px){
+    
+    .suscribe {
+        display: none;
+    }
+
+    .cardholder {
+        height: 1850px;
+    }
+
+    .descarga-app {
+        background-image: url(./images/APP\ mobil.png);
+        background-position-x: center;
+        height: 300px;
+    }
+
+    .descarga-app button {
+        height: 20%;
+        width: 30%;
+        top: 190px;
+        left: 85px;
+        font-size: 1rem;
+    }
+
+    .bolsa-trabajo {
+        height: 600px;
+        flex-direction: column;
+    }
+
+    .unete {
+        max-height: 10%;
+        border-bottom: solid black 2px;
+        flex-grow: 0;
+    }
+
+    .unete h1 {
+        font-size: 2rem;
+        margin-top: 13px;
+    }
+
+    .job-img-cont {
+        max-height: 55%;
+        background-position-y: -135px;
+        border-bottom: none;
+        flex-grow: 1;
+        flex-basis: ;
+    }
+
+    .job-info {
+        max-height: 35%;
+        flex-grow: 1;
+        flex-basis: 200px;
+    }
+
+    .job-info h3 {
+        font-size: 1.7rem;
+    }
+
+    .job-info p {
+        display: none;
+    }
+
+    .job-info button {
+        width: 40%;
+        height: 25%;
+        font-size: 1.3rem;
+        margin-top: 3%;
+    }
+
+    footer {
+        height: 300px;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .footer-social {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        justify-content: center;
+        min-width: 100%;
+        max-height: 20%;
+
+    }
+
+    .icon {
+        height: 35px;
+        margin-top: 1rem;
+    }
+
+    .footer-cont {
+        margin-top: 0;
+        
 }
